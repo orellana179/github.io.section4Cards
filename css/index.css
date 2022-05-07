@@ -1,3 +1,15 @@
+:root{
+    /* Colors */
+    /* primary */
+    --red:hsl(0, 78%, 62%);
+    --cyan:hsl(180, 62%, 55%);
+    --orange:hsl(34, 97%, 64%);
+    --blue:hsl(212, 86%, 64%);
+    /* neutral */
+    --veryDarkBlue:hsl(234, 12%, 34%);
+    --grayish:hsl(229, 6%, 66%);
+    --veryLightGray:hsl(0, 0%, 98%);
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +18,93 @@
 html{
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--veryLightGray);
+}
+main{
+    display: grid;
+    margin-top: 100px;
+    gap:50px;
+}
+.header{
+    width: 90%;
+    height: 200px;
+    place-self: center;
+    text-align: center;
+}
+.header-title1{
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--grayish);
+    margin-bottom: 10px;
+}
+.header-title2{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--veryDarkBlue);
+    margin-bottom: 15px;
+}
+.header-description{
+    font-size: 1.8rem;
+    color: var(--grayish);
+    font-weight: 400;
+}
+.section-card{
+    padding: 20px;
+    margin-bottom: 20px;
+    display: grid;
+}
+.card{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border-top: 3px --blue;
+    background-color: white;
+    margin-bottom: 25px;
+    box-shadow: 1px 3px 8px 4px hsl(229, 12%, 82%); 
+    padding: 20px;
+    max-width: 375px;
+    justify-self: center;
+}
+.supervisor{
+    border-top: 8px solid var(--cyan);
+}
+.teamBuilde{
+    border-top: 8px solid var(--red);
+}
+.karma{
+    border-top: 8px solid var(--orange); 
+}
+.calculator{
+    border-top: 8px solid var(--blue); 
+}
+.card-title{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--veryDarkBlue);
+}
+.card-description{
+    font-size: 1.5rem;
+    color: var(--grayish);
+    margin-bottom: 10px;
+}
+.card-icon{
+    display: grid;
+}
+.icon{
+    align-self: flex-end;
+    justify-self: end;
+    width: 75px;
+    height: 75px;
+}
+@media screen and (min-width:650px) {
+    .section-card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-auto-rows: 25rem;
+        gap: 20px;
+    }
 }
