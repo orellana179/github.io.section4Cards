@@ -103,8 +103,34 @@ main{
 @media screen and (min-width:650px) {
     .section-card{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        grid-auto-rows: 25rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 250px;
         gap: 20px;
+    }
+}
+@media screen and (min-width:950px) {
+    .section-card{
+        place-self: center;
+        width: 950px;
+        display: grid;
+        grid-template-columns: repeat(3,300px);
+        grid-template-rows: repeat(2,250px);
+        gap: 20px;
+        grid-template-areas: "left top right"
+                                "left buttom right";
+    }
+    .supervisor{
+        grid-area: left;
+        align-self: center;
+    }
+    .teamBuilde{
+        grid-area: top;
+    }
+    .karma{
+        grid-area: buttom;
+    }
+    .calculator{
+        grid-area: right;
+        align-self: center;
     }
 }
