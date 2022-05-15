@@ -108,29 +108,3 @@ main{
         gap: 20px;
     }
 }
-@media screen and (min-width:950px) {
-    .section-card{
-        place-self: center;
-        width: 950px;
-        display: grid;
-        grid-template-columns: repeat(3,300px);
-        grid-template-rows: repeat(2,250px);
-        gap: 20px;
-        grid-template-areas: "left top right"
-                                "left buttom right";
-    }
-    .supervisor{
-        grid-area: left;
-        align-self: center;
-    }
-    .teamBuilde{
-        grid-area: top;
-    }
-    .karma{
-        grid-area: buttom;
-    }
-    .calculator{
-        grid-area: right;
-        align-self: center;
-    }
-}
