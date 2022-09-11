@@ -26,11 +26,19 @@
         <section class="section-card">
             <article class="card supervisor">
                 <div class="card-info">
-                    <h2 class="card-title">Supervisor</h2>
+                    <h2 class="card-title">Cuadrado</h2>
                 <p class="card-description">
-                    Monitors activity to identify project roadblocks
+                    Calcular el perímetro y área de un cuadrado
                 </p>
+                
                 </div>
+                <form action="">
+                    <label for="inputperimetro">Ingresar el lado de un cuadrado</label>
+                    <input type="number" id="inputPerimetro">
+                    <button type="button" onclick="calcularPerimetrocuadrado()">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreacuadrado()">Calcular Área</button>
+
+                </form>
                 <picture class="card-icon">
                     <img src="images/icon-supervisor.svg" alt="Image the Supervisor" class="icon">
                 </picture>
@@ -48,17 +56,7 @@
                 </picture>
                 
             </article>
-            <article class="card karma">
-                <div class="card-info">
-                    <h2 class="card-title">Karma</h2>
-                <p class="card-description">
-                    Regularly evaluates our talent to ensure quality
-                </p>
-                </div>
-                <picture class="card-icon">
-                    <img src="images/icon-karma.svg" alt="Image the Supervisor" class="icon">
-                </picture>
-            </article>
+            
             <article class="card calculator">
                 <div class="card-info">
                     <h2 class="card-title">Calculator</h2>
@@ -73,5 +71,6 @@
             </article>
         </section>
     </main>
+    <script src="js/figure.js"></script>
 </body>
 </html>

@@ -24,8 +24,8 @@ body{
 }
 main{
     display: grid;
-    margin-top: 100px;
-    gap:50px;
+    margin-top: 50px;
+    gap:10px;
 }
 .header{
     width: 90%;
