@@ -10,7 +10,7 @@ function areaCuadrado(lados) {
 function perimetroTriangulo(lado1, lado2, base) {
     return lado1 + lado2 + base;
 }
-function areaTrinagulo(base,altura) {
+function areaTriangulo(base,altura) {
     return (base * altura) / 2;
 }
 
@@ -30,16 +30,55 @@ function areaCirculo(radio) {
 }
 
 //Interactuamos con el HTML
+const result = document.getElementById('result');
 
 function calcularPerimetrocuadrado() {
     const input = document.getElementById('inputPerimetro');
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    result.innerHTML = perimetro; 
 }
 function calcularAreacuadrado() {
     const input = document.getElementById('inputPerimetro');
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(area);
+    result.innerHTML = area;
 }
+
+
+//Triángulo
+//Ocultar form
+
+function mostrarFormArea() {
+    const btnPerimetro = document.getElementById('formPerimetro');
+    const btnArea = document.getElementById('formArea');
+
+    btnPerimetro.classList.remove('active');
+    btnPerimetro.classList.add('inactive');
+    btnArea.classList.remove('inactive');
+    btnArea.classList.add('active');
+}
+function mostrarFormPerimetro() {
+    const btnPerimetro = document.getElementById('formPerimetro');
+    const btnArea = document.getElementById('formArea');
+
+    btnArea.classList.remove('active');
+    btnArea.classList.add('inactive');
+    btnPerimetro.classList.remove('inactive');
+    btnPerimetro.classList.add('active');
+}
+
+function calcularPerimetroTriangulo() {
+    const input1 = document.getElementById('lado1PerimetroTriangulo');
+    const input2 = document.getElementById('lado2PerimetroTriangulo');
+    const inputBase = document.getElementById('basePerimetroTriangulo');
+    const resultadoTriangulo = document.getElementById('resultTriangulo');
+
+    const lado1 = parseInt(input1.value);
+    const lado2 = parseInt(input2.value);
+    const base = parseInt(inputBase.value);
+
+    const totalPerimetroTriangulo = perimetroTriangulo(lado1,lado2,base);
+    resultadoTriangulo.innerHTML = totalPerimetroTriangulo;
+}
+

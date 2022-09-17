@@ -1,31 +1,13 @@
-# github.io.section4Cards
-Una pagina web con 4 tarjetas con la metodología de Mobile-first y desktop
+# Figuras Geometricas
+Este es un proyecto de figuras geometricas, donde se calculan el área y perimetro de un cuadrado,
 
-The designs were created to the following widths:
+## Estructure
+utilizamos el modelo Mobile First para el diseño y utilizamos javascript para los calculos
 
-- Mobile: 375px
-- Desktop: 1440px
+### Reto
+este es un reto del Curso Práctico de JavaScript de Platzi.
 
-## Colors
 
-### Primary
-
-- Red: hsl(0, 78%, 62%)
-- Cyan: hsl(180, 62%, 55%)
-- Orange: hsl(34, 97%, 64%)
-- Blue: hsl(212, 86%, 64%)
-
-### Neutral
-
-- Very Dark Blue: hsl(234, 12%, 34%)
-- Grayish Blue: hsl(229, 6%, 66%)
-- Very Light Gray: hsl(0, 0%, 98%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 15px
 
 ### Fonts
 

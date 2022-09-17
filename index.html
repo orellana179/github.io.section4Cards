@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Section Four Cards</title>
+    <title>Figuras Geometricas</title>
     <link rel="shortcut icon" href="images/icon-calculator.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:950px)">
@@ -15,8 +15,7 @@
 <body>
     <main>
         <header class="header">
-            <h1 class="header-title1">Reliable, efficient delivery</h1>
-            <h1 class="header-title2">Powered by Technology</h1>
+            <h1 class="header-title2">Figuras Geometricas</h1>
             <p class="header-description">
                 Our Artificial
                 Intelligence powered tools use millions of project data points to ensure
@@ -30,31 +29,72 @@
                 <p class="card-description">
                     Calcular el perímetro y área de un cuadrado
                 </p>
-                
                 </div>
-                <form action="">
-                    <label for="inputperimetro">Ingresar el lado de un cuadrado</label>
-                    <input type="number" id="inputPerimetro">
-                    <button type="button" onclick="calcularPerimetrocuadrado()">Calcular Perimetro</button>
-                    <button type="button" onclick="calcularAreacuadrado()">Calcular Área</button>
-
-                </form>
-                <picture class="card-icon">
-                    <img src="images/icon-supervisor.svg" alt="Image the Supervisor" class="icon">
-                </picture>
-                
+                <form class="formFigure">
+                    <label for="inputperimetro" class="formLabel">Ingresar el lado de un cuadrado</label>
+                    <input type="number" id="inputPerimetro" class="formInput" placeholder="Lado del Cuadrado">
+                    <div class="containerBtn">
+                    <button type="button" onclick="calcularPerimetrocuadrado()" class="btn">Calcular Perimetro</button>
+                    <button type="button" onclick="calcularAreacuadrado()" class="btn">Calcular Área</button>
+                    </div>
+                    <div class="resultOperation">Resultado: <span id="result"></span></div>
+                </form> 
             </article>
             <article class="card teamBuilde">
                 <div class="card-info">
-                    <h2 class="card-title">Team Builde</h2>
-                <p class="card-description">
-                    Scans our talent network to create the optimal team for your project
-                </p>
+                    <h2 class="card-title">Triángulo</h2>
+                <div class="tab">
+                  <button type="button" id="btnPerimetro" onclick="mostrarFormPerimetro()">
+                     Calcular Perimetro</button>
+                  <button type="button" id="btnArea" onclick="mostrarFormArea()">Calcular Area</button>
                 </div>
-                <picture class="card-icon">
-                    <img src="images/icon-team-builder.svg" alt="Image the Supervisor" class="icon">
-                </picture>
-                
+                </div>
+                <div class="formTriangulo">
+                <form class="formPerimetro active" id="formPerimetro">
+                    <h3 class="titleTriangulo">Calcular Perimetro</h3>
+                    <label for="lado1PerimetroTriangulo" class="formLabel">
+                        Inserta el tamaño del lado 1 del Trinagulo
+                    </label>
+                    <input type="number" id="lado1PerimetroTriangulo"
+                    class="formInput" placeholder="Insertar lado 1">
+                    <label for="lado2PerimetroTriangulo" class="formLabel">
+                        Inserta el tamaño del lado 2 del Trinagulo
+                    </label>
+                    <input type="number" id="lado2PerimetroTriangulo" 
+                    class="formInput" placeholder="Insertar lado 2">
+                    <label for="basePerimetroTriangulo" class="formLabel">
+                        Inserta tamaño de la  base
+                    </label>
+                    <input type="number" id="basePerimetroTriangulo" 
+                    class="formInput" placeholder="Insertar la base">
+                    <div class="form-footer">
+                        <button type="button" class="btn" id="btnPerimetroTrianguloId" 
+                        onclick="calcularPerimetroTriangulo()" >
+                            Calcular Perímetro
+                        </button>
+                        <div class="resultTriangulo">Resultado: 
+                            <span id="resultTriangulo"></span>
+                        </div>
+                    </div>
+                </form>
+                <form class="formArea inactive" id="formArea">
+                  <h3 class="titleTriangulo">Calcular Área</h3>
+                  <label for="" class="formLabel">Insertar altura del triángulo</label>
+                  <input type="number" class="formInput" id="alturaTriangulo" 
+                  placeholder="Insertar altura del triangulo">
+                  <label for="" class="formLabel">Insertar base del triángulo</label>
+                  <input type="number" class="formInput" id="alturaTriangulo" 
+                  placeholder="Insertar altura del triangulo">
+                  <div class="form-footer">
+                     <button type="button" class="btn" id="calcularAreaTriangulo">
+                        Calcular Área
+                     </button>
+                     <div class="resultTriangulo">Resultado: 
+                        <span id="resultTriangulo"></span>
+                    </div>
+                  </div>
+                </form>
+               </div>
             </article>
             
             <article class="card calculator">
@@ -71,6 +111,6 @@
             </article>
         </section>
     </main>
-    <script src="js/figure.js"></script>
+    <script src="js/figure.js" defer></script>
 </body>
 </html>
